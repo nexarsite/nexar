@@ -48,7 +48,7 @@ function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/50">
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2 font-display font-semibold tracking-tight">
-          <img src="https://i.ibb.co/DHw11p9s/site-logo.png" alt="Nexar" width="100">
+          <img src="https://i.ibb.co/DHw11p9s/site-logo.png" alt="Nexar" width="100"></img>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#services" className="hover:text-foreground transition-colors">Serviços</a>
@@ -367,7 +367,7 @@ function Footer() {
     <footer className="border-t border-border py-10 px-6">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
-          <img src="https://i.ibb.co/DHw11p9s/site-logo.png" alt="Nexar" width="150">
+          <img src="https://i.ibb.co/DHw11p9s/site-logo.png" alt="Nexar" width="150"></img>
         </div>
         <div className="flex items-center gap-6">
           <a href="https://www.instagram.com/nexar.site" className="hover:text-foreground transition-colors">Instagram</a>
