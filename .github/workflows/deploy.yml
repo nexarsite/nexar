@@ -20,17 +20,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: '20'
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: npm ci
+
+      - name: Debug: show env and versions
+        run: |
+          node -v
+          npm -v
+          echo "Listing repo files:"
+          ls -la
+          echo "package.json:"
+          sed -n '1,200p' package.json || true
 
       - name: Build (static / GitHub Pages)
         env:
           NITRO_PRESET: github_pages
-        run: bun run build
+          NODE_ENV: production
+        run: npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
