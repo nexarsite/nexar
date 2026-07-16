@@ -9,7 +9,7 @@ const Scene3D = lazy(() => import("@/components/nexar/Scene3D"));
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nexar — Web Studio de sites modernos e memoráveis" },
+      { title: "Nexar" },
       {
         name: "description",
         content:
@@ -48,8 +48,7 @@ function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/50">
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2 font-display font-semibold tracking-tight">
-          <span className="inline-block h-6 w-6 rounded-md bg-gradient-to-br from-white to-neutral-500" />
-          <span className="text-lg">nexar</span>
+          <img src="https://i.ibb.co/DHw11p9s/site-logo.png" alt="Nexar" width="100">
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#services" className="hover:text-foreground transition-colors">Serviços</a>
@@ -270,10 +269,7 @@ function Process() {
 }
 
 const projects = [
-  { name: "Órbita Studio", tag: "Portfólio criativo", year: "2025" },
-  { name: "Fluxo Financeiro", tag: "Fintech / SaaS", year: "2025" },
-  { name: "Cadence Coffee", tag: "E-commerce", year: "2024" },
-  { name: "Vante Arquitetura", tag: "Institucional", year: "2024" },
+  { name: "Coffee House", tag: "Cafeteria", year: "2025", href: "https://nexarsite.github.io/nexar/projects/coffee_house" },
 ];
 
 function Work() {
@@ -283,12 +279,12 @@ function Work() {
         <SectionHeader
           eyebrow="Projetos"
           title={<>Trabalhos<br />recentes.</>}
-          copy="Uma seleção de projetos entregues nos últimos meses."
+          copy="Nossos projetos fictícios para demonstração"
         />
         <div className="mt-20 border-t border-border">
           {projects.map((p, i) => (
             <motion.a
-              href="#"
+              href={p.href}
               key={p.name}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -354,10 +350,10 @@ function CTA() {
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <a
-            href="mailto:ola@nexar.studio"
+            href="ig.me/m/nexar.site"
             className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-4 text-base font-medium hover:opacity-90 transition"
           >
-            ola@nexar.studio
+            Fale conosco pelo Instagram
             <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </a>
         </motion.div>
@@ -371,13 +367,11 @@ function Footer() {
     <footer className="border-t border-border py-10 px-6">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
-          <span className="inline-block h-4 w-4 rounded bg-gradient-to-br from-white to-neutral-500" />
-          <span>© {new Date().getFullYear()} Nexar Studio</span>
+          <img src="https://i.ibb.co/DHw11p9s/site-logo.png" alt="Nexar" width="150">
         </div>
         <div className="flex items-center gap-6">
-          <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
-          <a href="#" className="hover:text-foreground transition-colors">Behance</a>
-          <a href="#" className="hover:text-foreground transition-colors">LinkedIn</a>
+          <a href="https://www.instagram.com/nexar.site" className="hover:text-foreground transition-colors">Instagram</a>
+          <a href="mailto:nexar.site@gmail.com" className="hover:text-foreground transition-colors">E-mail</a>
         </div>
       </div>
     </footer>
