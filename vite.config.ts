@@ -14,4 +14,10 @@ export default defineConfig({
     // Generate a static SPA so the build outputs a single index.html for static hosting.
     ssr: false,
   },
+  nitro: {
+    preset: "static",
+    prerender: {
+      routes: ["/"],
+    },
+  },
 });
