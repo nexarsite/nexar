@@ -350,7 +350,7 @@ function CTA() {
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <a
-            href="ig.me/m/nexar.site"
+            href="https://ig.me/m/nexar.site"
             className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-4 text-base font-medium hover:opacity-90 transition"
           >
             Fale conosco pelo Instagram
