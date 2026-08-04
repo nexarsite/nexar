@@ -269,7 +269,7 @@ function Process() {
 }
 
 const projects = [
-  { name: "Coffee House", tag: "Cafeteria", year: "2025", href: "https://nexarsite.github.io/nexar/projects/coffee_house" },
+  { name: "Coffee House", tag: "Cafeteria", year: "2025", href: "https://nexarsite.github.io/landing/projects/coffee_house" },
 ];
 
 function Work() {
